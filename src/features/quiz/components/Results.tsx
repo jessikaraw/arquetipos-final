@@ -7,7 +7,7 @@ import { Card, CardContent } from '../../../components/Card/Card';
 import Progress from '../../../components/Progress/Progress';
 import { getArchetypeDescription } from '../../../utils/getArchetypeDescription';
 import './Results.css';
-import logo from '../../../assets/images/logo_ottoni.png';
+import logo from '../../../assets/images/logo_juliaottoni.png';
 import stopIcon from '../../../assets/images/stop-icon.png';
 
 interface Archetype {

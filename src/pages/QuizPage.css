@@ -5,13 +5,13 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #e9e4dd;
+  background-color: #E6D9D9;
   padding: 1rem; /* Garante um respiro nas laterais */
   font-family: 'Poppins', sans-serif;
 }
 
 .pergunta-container {
-  background: #f4f0e9;
+  background: #E6D9D9;
   padding: clamp(1rem, 4vw, 1.5rem); /* Padding responsivo */
   border-radius: 20px;
   width: 100%;
