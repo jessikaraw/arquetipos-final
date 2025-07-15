@@ -378,6 +378,7 @@
 .transformation-title {
   font-family: var(--font-body);
   font-size: 1.5rem;
+  text-align: center;
   font-weight: 700;
   color: white;
   margin-bottom: -0.6%;

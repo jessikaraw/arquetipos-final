@@ -87,7 +87,7 @@ const QuizPage: React.FC = () => {
     const isLast = currentQuestion === questions.length - 1;
 
     return (
-        <div className="teste-container">
+        <div className="quiz-container">
             <div className="pergunta-container">
                 <div className="quiz-header">
                     <button className="back-to-home-button" onClick={handlePrevious} title="Voltar">

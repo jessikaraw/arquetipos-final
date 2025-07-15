@@ -10,6 +10,9 @@
   text-align: center;
   overflow: hidden;
   color: #333;
+  background-image: url('../assets/images/img_bg.png');
+  background-size: cover;
+  background-position: center;
 
   /* --- AJUSTE DE POSIÇÃO --- */
   justify-content: flex-end; /* Alinha o conteúdo na PARTE DE BAIXO */
@@ -18,17 +21,7 @@
   padding-bottom: 12vh;      
 }
 
-.landing-background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../assets/images/img_bg.png');
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
+
 
 /* O .landing-content não precisa mais de altura ou de 'space-between' */
 .landing-content {
@@ -71,7 +64,7 @@
   margin-top: 1.5rem;
   color: #000000;
   max-width: 300px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* --- BOTÃO COM ESTILO DOURADO --- */

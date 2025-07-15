@@ -62,7 +62,7 @@
 
 .info-text, .info-obs, .info-ready {
   font-family: 'Claster Oleander', serif;
-  font-size: clamp(1.1rem, 4vw, 1.2rem);
+  font-size: clamp(1.4rem, 4vw, 1.6rem);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }

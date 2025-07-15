@@ -179,7 +179,7 @@ export default function Results({ dominant, secondary }: ResultsProps) {
               </div>
 
               <div className="footer">
-                <p>Desenvolvido por Code Inovações ©. <br /> Todos direitos reservados para  Ottoni© 2025</p>
+                <p>Desenvolvido por Code Inovações ©. <br /> Todos direitos reservados para Julia Ottoni© 2025</p>
               </div>
             </>
           )}

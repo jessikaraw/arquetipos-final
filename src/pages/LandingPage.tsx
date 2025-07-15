@@ -3,14 +3,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LandingPage.css';
-import logoJulia from '../assets/images/logo_juliaottoni.png'; 
+import logoJulia from '../assets/images/logo_ottoni.png'; 
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
 
   return (
     <div className="landing-container">
-      <div className="landing-background-image" />
 
       <img src={logoJulia} alt="Julia Ottoni Academy" className="landing-logo" />
       
