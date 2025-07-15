@@ -1,0 +1,153 @@
+/* Caminho: projeto-tql-2/src/pages/InfoPage.css */
+
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.info-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/img_bg.png'); 
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Desfoque no fundo */
+  transform: scale(1.1);
+  z-index: -2;
+}
+
+.info-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 8, 8, 0.67); /* Overlay escuro para legibilidade */
+  z-index: -1;
+}
+
+.info-card {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px; /* Padding horizontal menor */
+  width: 90%; /* Ocupa 90% da largura da tela */
+  max-width: 500px;
+  color: white;
+}
+
+.info-title {
+  font-family: 'Brown Sugar', serif;
+  background-image: url('../assets/images/DOURADO (2).png');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Ajustes de tamanho e espaçamento */
+  font-size: clamp(3.5rem, 12vw, 4.5rem); /* Tamanho ajustado para a nova fonte */
+  font-weight: normal; /* A própria fonte já pode ter um peso específico */
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.info-text, .info-obs, .info-ready {
+  font-family: 'Claster Oleander', serif;
+  font-size: clamp(1.1rem, 4vw, 1.2rem);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.info-ready {
+  font-family: 'Claster Oleander', serif;
+  font-size: clamp(1.3rem, 5vw, 1.6rem); /* Aumentei um pouco para o efeito aparecer melhor */
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  
+  /* 2. Efeito de preenchimento com a imagem dourada */
+  background-image: url('../assets/images/DOURADO (2).png');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.info-button {
+  background-image: url('../assets/images/DOURADO (2).png');
+  background-size: cover;
+  background-position: center;
+
+  /* 2. Fonte Poppins */
+  font-family: 'Poppins', sans-serif;
+
+  /* Estilos para garantir a legibilidade e aparência */
+  color: white; /* Texto branco para contrastar com o fundo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil no texto */
+  border: none;
+  padding: 18px 70px;
+  font-size: 1.1em;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  
+  animation: pulse-animation 2.5s infinite;
+}
+
+.info-button:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  /* Adiciona um leve brilho no hover */
+  filter: brightness(1.1);
+}
+
+.info-header {
+  position: absolute; /* Posiciona o botão em relação ao card */
+  top: 15px;
+  left: 15px;
+}
+
+.info-back-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.7); /* Cor da seta */
+  transition: color 0.3s ease;
+}
+
+.info-back-button:hover {
+  color: white; /* Cor da seta ao passar o mouse */
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    transform: scale(1.05);
+    /* Cria um "brilho" dourado ao redor do botão */
+    box-shadow: 0 8px 35px rgba(228, 208, 176, 0.4); 
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  }
+}

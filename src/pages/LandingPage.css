@@ -1,0 +1,107 @@
+/* Caminho: projeto-tql-2/src/pages/LandingPage.css */
+
+.landing-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #333;
+
+  /* --- AJUSTE DE POSIÇÃO --- */
+  justify-content: flex-end; /* Alinha o conteúdo na PARTE DE BAIXO */
+  
+  /* Altere de -10vh para um valor positivo, como 12vh */
+  padding-bottom: 12vh;      
+}
+
+.landing-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/img_bg.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* O .landing-content não precisa mais de altura ou de 'space-between' */
+.landing-content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Ocupa 90% da largura da tela */
+  padding: 1rem; /* Padding menor para telas pequenas */
+}
+
+.landing-logo {
+  position: fixed;
+  top: 30px;
+  left: 52.1%;
+  transform: translateX(-50%);
+  width: 200px; /* Diminuí um pouco para ficar mais sutil */
+  z-index: 100;
+}
+
+.landing-title {
+  font-family: 'Brown Sugar', serif; /* Mantendo sua fonte */
+  font-size: clamp(3.5rem, 12vw, 5rem); /* Aumentei um pouco para o efeito ficar mais visível */
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  font-weight: bold;
+
+  background-image: url('../assets/images/DOURADO (2).png');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.landing-subtitle {
+  font-family: 'Claster Oleander', serif; /* Mantendo sua fonte */
+  font-size: clamp(1.1rem, 4vw, 1.3rem);
+  margin-top: 1.5rem;
+  color: #000000;
+  max-width: 300px;
+  font-weight: bold;
+}
+
+/* --- BOTÃO COM ESTILO DOURADO --- */
+.landing-button {
+  background-image: url('../assets/images/DOURADO (2).png');
+  background-size: cover;
+  background-position: center;
+
+  /* 2. Fonte Poppins */
+  font-family: 'Poppins', sans-serif;
+
+  /* Estilos para garantir a legibilidade e aparência */
+  color: white; /* Texto branco para contrastar com o fundo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil no texto */
+  border: none;
+  padding: 18px 70px;
+  font-size: 1.1em;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600; /* Um peso bom para Poppins */
+  text-transform: none;
+  letter-spacing: 0.5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  margin-top: 2.5rem;
+}
+
+.landing-button:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  /* Adiciona um leve brilho no hover */
+  filter: brightness(1.1);
+}

@@ -1,0 +1,161 @@
+/* Caminho: src/pages/QuizPage.css */
+
+.quiz-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e9e4dd;
+  padding: 1rem; /* Garante um respiro nas laterais */
+  font-family: 'Poppins', sans-serif;
+}
+
+.pergunta-container {
+  background: #f4f0e9;
+  padding: clamp(1rem, 4vw, 1.5rem); /* Padding responsivo */
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px; /* Um pouco mais de espaço */
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.quiz-header {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.back-to-home-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 1.5rem; /* Aumenta o ícone para ser mais fácil de clicar */
+}
+
+.back-to-home-button:hover {
+  color: #916464;
+}
+
+.pergunta-titulo {
+  font-family: 'Poppins', sans-serif; /* Corrigido: 'poppis' para 'Poppins' */
+  font-size: clamp(1.2rem, 4vw, 1.5rem); /* Fonte responsiva */
+  font-weight: 600; /* Ajustado para melhor leitura */
+  margin-bottom: 1.5rem;
+  color: rgb(37, 37, 31);
+  line-height: 1.4;
+  min-height: 80px;
+  display: flex; /* Para centralizar verticalmente */
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-progresso-container {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.barra-progresso-pergunta {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 3px;
+  transition: width 0.4s ease-out;
+}
+
+.alternativas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Um pouco mais de espaço */
+  margin-bottom: 2.5rem;
+}
+
+/* --- ESTILO DO BOTÃO (COM AS CORREÇÕES) --- */
+.alternativa-botao {
+  width: 100%;
+  padding: 15px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  line-height: 1.4; /* Melhora a leitura de texto em múltiplas linhas */
+  
+  /* A CORREÇÃO PRINCIPAL: */
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+  white-space: normal; /* Permite que o texto quebre a linha */
+  word-wrap: break-word; /* Força quebras para evitar estouro */
+
+  background-image: 
+    linear-gradient(rgba(244, 240, 233, 0.7), rgba(244, 240, 233, 0.7)),
+    url('../assets/images/DOURADO (2).png');
+  background-size: cover;
+  background-position: center;
+}
+
+.alternativa-botao:hover {
+  transform: translateY(-2px); /* Efeito mais sutil */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background-image: 
+    linear-gradient(rgba(244, 240, 233, 0.5), rgba(244, 240, 233, 0.5)),
+    url('../assets/images/DOURADO (2).png');
+}
+
+.alternativa-botao.selecionada {
+  background-image: url('../assets/images/AZUL (2).png');
+  color: white;
+  border: 2px solid transparent; /* Remove a borda padrão para não somar tamanho */
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+  transform: scale(1.02);
+}
+
+.navegacao {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.botao-navegacao {
+  flex-grow: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.botao-navegacao.selecionar {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.botao-navegacao.selecionar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.botao-navegacao.selecionar:not(:disabled):hover {
+  background-color: #45a049;
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.botao-navegacao.full-width {
+    flex-grow: 0;
+    width: 100%;
+}

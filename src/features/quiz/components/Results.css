@@ -1,0 +1,662 @@
+/*Div de organização*/
+.conteudo {
+  display: flex;
+  padding: 1%;
+  padding-bottom: 1%;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/* Container principal */
+.results-container {
+  height: 90%;
+}
+
+.results-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  /* Garante um espaçamento mínimo nas laterais em telas pequenas */
+  padding: 1rem; 
+  background-color: #cab3b3;
+  border-radius: 15px;
+} 
+
+/* Cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* --- TÍTULO PRINCIPAL AJUSTADO --- */
+.main-title {
+    font-family: 'Claster Oleander', serif;
+    font-size: 2.1rem;
+    font-weight: normal;
+    color: #000000; /* Alterado para preto */
+    margin-bottom: 0.75rem;
+    line-height: 1;
+    
+}
+
+/* --- SUBTÍTULO AJUSTADO --- */
+.subtitle {
+    font-family: 'Claster Oleander', serif;
+  font-size: 2.25rem;
+  color: #FFFFFF; /* Alterado para branco */
+  max-width: 36rem;
+  margin: 0 auto;
+  margin-top: 10%;
+  font-weight: 600;
+  
+}
+
+/* Componentes Base */
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.progress-container {
+  width: 100%;
+  padding-left: 0.5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  height: 0.8rem;
+  background-color: #eeeeec;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* --- BARRA DE PROGRESSO COM IMAGEM DOURADA --- */
+.progress-indicator {
+  height: 95%;
+  border-radius: 15px;
+  transition: width 0.3s ease;
+  
+  /* Aplica a imagem dourada como fundo */
+  background-image: url('../../../assets/images/DOURADO (2).png');
+  background-size: cover;
+  background-position: center;
+  /* --- AJUSTE O TAMANHO DA IMAGEM AQUI --- */
+  background-size: 100%; /* <<-- VALOR SUGERIDO: Teste com 300%, 400%, etc. */
+}
+
+/* Resultado Principal */
+.primary-card {
+  font-family: var(--font-body);
+  background: #AC8B74;
+  border: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.primary-card-content {
+  padding: 1rem; /* Reduz o padding interno no celular */
+}
+
+
+.primary-card-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.primary-info {
+  width: 100%;
+}
+
+.primary-heading {
+  /* Alinhamento ajustado para a esquerda */
+  text-align: left;
+  
+  /* Fonte aumentada e em negrito */
+  font-size: 1.6rem; 
+  font-weight: bold;
+
+  color: white;
+  margin-bottom: 0.5rem; /* Ajustei a margem para o novo alinhamento */
+  margin-top: 0;
+}
+
+.primary-title-container {
+  display: flex;
+  align-items: center; /* Mude de 'baseline' para 'center' para um melhor alinhamento vertical */
+  justify-content: center; /* Centraliza o conjunto na horizontal */
+  gap: 0.5rem; /* Reduz o espaço entre o título e a porcentagem */
+  margin-bottom: 0.5rem; /* Removi a margem negativa que podia causar problemas */
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha se não couberem */
+}
+
+.primary-title {
+  font-family: var(--font-body);
+  /* Usando clamp() para a fonte ser responsiva: min, ideal, max */
+  font-size: clamp(1.8rem, 7vw, 2.5rem); 
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.primary-percentage {
+  font-family: var(--font-body);
+  /* A mesma técnica de clamp() para a porcentagem */
+  font-size: clamp(1.8rem, 7vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
+.primary-progress {
+  font-family: var(--font-body);
+  margin-bottom: 5%;
+  padding-left: 1.5%;
+  padding-top: 1%;
+  padding-bottom: 0.5%;
+  height: 0.8rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.primary-traits {
+  font-family: var(--font-body);
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.traits-label {
+  font-weight: 700;
+}
+
+.primary-description {
+  color: white;
+  font-size: 0.875rem;
+}
+
+/* Componente de Vídeo */
+.video-container {
+  width: 100%;
+  position: relative;
+}
+
+.video-wrapper {
+  aspect-ratio: 16 / 9;
+  background-color: rgba(120, 53, 15, 0.1);
+  border-radius: 0.375rem;
+  position: relative;
+  overflow: hidden; /* IMPORTANTE: Trava qualquer conteúdo que tente "vazar" */
+}
+
+.video-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* Garante que ocupe toda a largura do pai */
+  height: 100%; /* Garante que ocupe toda a altura do pai */
+  background: #000000e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.play-button {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 9999px;
+  padding: 0.5rem;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  background-color: #ffffff;
+}
+
+.play-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #d97706;
+}
+
+.video-caption {
+  font-family: var(--font-body);
+  text-align: center;
+  font-weight: 600; /* Um pouco mais leve */
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0.5rem; /* Adiciona espaço antes do vídeo */
+  font-size: 1rem;
+  padding: 0 1rem; /* Evita que o texto encoste nas bordas */
+}
+
+/* Overlay VSL para bloquear o vídeo até clicar no botão */
+.vsl-overlay {
+  position: absolute;
+  inset: 0;
+  background: #000000e6; /* Preto com transparência */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.vsl-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem; /* Diminui a fonte da mensagem de overlay no celular */
+  font-weight: 600;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.vsl-message img {
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.vsl-message .highlight {
+  color: #ff1a1a;
+  font-weight: bold;
+}
+
+.vsl-cta {
+  margin-top: 0.5rem;
+  background: #ff1a1a;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 1.1rem 2.2rem;
+  font-size: 1.15rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  letter-spacing: 1px;
+  transition: background 0.2s;
+  display: block;
+  text-align: center;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
+.vsl-overlay {
+  pointer-events: all;
+}
+
+.react-player {
+  pointer-events: none;
+}
+
+/* Arquétipos Secundários */
+.section-title {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #131313;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.secondary-grid {
+  font-family: var(--font-body);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.secondary-card {
+  background-color: #AC8B74;
+  border: none;
+}
+
+.secondary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: -2%;
+}
+
+.secondary-title {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.secondary-percentage {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+}
+
+.secondary-progress {
+  font-family: var(--font-body);
+  margin-bottom: 1.3rem;
+}
+
+.secondary-progress .progress-indicator {
+  background-image: url('../../../assets/images/DOURADO (2).png');
+}
+
+.secondary-description {
+  font-family: var(--font-body);
+  color: #f8f7f6;
+  font-size: 0.875rem;
+}
+
+/* Seção de Transformação */
+.transformation-section {
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  background: #AC8B74;
+  border-radius: 0.375rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.transformation-title {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: -0.6%;
+}
+
+.transformation-text {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 3%;
+}
+
+.credentials-access {
+  font-family: var(--font-body);
+  margin: 0 auto;
+  margin-bottom: 3%;
+  color: rgba(255, 255, 255, 0.462);
+  text-align: center;
+
+}
+
+.transformation-button {
+  font-family: var(--font-body);
+  width: 100%;
+  background-color: #007b13;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.transformation-button:hover {
+  background-color: #b45309;
+}
+
+.button-icon {
+  margin-left: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  color: #92400e;
+  font-size: 0.75rem;
+}
+
+/* Floating CTA para mobile */
+.floating-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, #fffbeb, transparent);
+  z-index: 40;
+  display: none;
+}
+
+.floating-cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.floating-cta-button {
+  width: 100%;
+  background-color: #d97706;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.scroll-top-button {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #fef3c7;
+  color: #92400e;
+  border: none;
+  cursor: pointer;
+}
+
+.scroll-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  transform: rotate(-90deg);
+}
+
+/* Media para Responsividade */
+@media (max-width: 768px) {
+  .floating-cta {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 1.875rem;
+  }
+
+  .primary-card-layout {
+    flex-direction: row;
+  }
+
+  .primary-info {
+    width: 50%;
+  }
+
+  .video-container {
+    width: 50%;
+  }
+
+  .secondary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .results-content {
+    padding: 2rem;
+  }
+}
+
+/* RESPONSIVIDADE: Quando houver só um secundário, ele ocupa toda a linha! */
+.secondary-grid.one-item {
+  grid-template-columns: 1fr !important;
+  justify-items: stretch;
+}
+.secondary-grid.one-item .secondary-card {
+  width: 100%;
+  max-width: unset;
+}
+
+.header img {
+  display: block;      
+  max-width: 250px; 
+  height: auto;  
+  margin: 0 auto 1rem auto;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.08);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Barra de progresso customizada abaixo do vídeo */
+.custom-progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.custom-progress {
+  height: 100%;
+  background-color: #ff3860;
+  border-radius: 4px;
+  transition: width 0.1s linear;
+}
+
+.replay-btn {
+  position: absolute;
+  right: 16px;
+  bottom: 24px;
+  background: #ff1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 12;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Centraliza e posiciona os controles abaixo do vídeo */
+.custom-controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem; /* Aumenta o espaço acima dos controles */
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+/* Mantém os botões alinhados e com espaçamento */
+.video-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Botão de play/pause */
+.playpause-btn {
+  background-color: #4a4a4a;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background-color 0.2s;
+}
+
+.playpause-btn:hover {
+  background-color: #6a6a6a;
+}
+
+/* Botões de velocidade */
+.speed-control {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.speed-control button {
+  background-color: #4a4a4a;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.speed-control button.active,
+.speed-control button:focus {
+  background-color: #ff1a1a;
+  color: #fff;
+  outline: none;
+}
+
+.speed-control button:hover {
+  background-color: #b45309;
+}
+
+/* Responsivo para controles */
+@media (max-width: 768px) {
+  .custom-controls-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+  }
+  .video-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
