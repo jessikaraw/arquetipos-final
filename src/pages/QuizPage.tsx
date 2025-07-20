@@ -50,7 +50,7 @@ const QuizPage: React.FC = () => {
             timeouts.push(t);
         });
         return () => timeouts.forEach(clearTimeout);
-    }, [currentQuestion, fullQuestion]);
+    }, [currentQuestion, fullQuestion, answers]);
 
     const handleAnswer = (alternativeIndex: number) => {
         setSelectedAlternative(alternativeIndex);

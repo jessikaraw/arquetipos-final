@@ -31,13 +31,13 @@ const InfoPage: React.FC = () => {
 
         <h1 className="info-title">Importante!</h1>
         <p className="info-text">
-          Avalie cada opção e selecione aquela que mais reflete quem você é (não quem deseja ser). Lembre-se que um posicionamento que conecta reflete a sua personalidade e não a de um personagem engessado.
+          Avalie cada opção e selecione aquela que mais reflete quem você é (não quem deseja ser). Lembre-se que um posicionamento que conecta reflete a sua identidade e não a de um personagem engessado.
         </p>
         <p className="info-obs">
           <strong>OBS:</strong> Reflita sobre o seu eu da infância, sobre características que sempre estiveram com você e não sobre uma fase atual que está vivendo. Nossa missão aqui é trazer sua essência com estratégia.
         </p>
         <p className="info-ready">
-          Está pronta para começar a sua jornada?
+          Está pronta para <br/> começar a sua jornada?
         </p>
         <button className="info-button" onClick={() => navigate('/quiz')}>
           Estou pronta!

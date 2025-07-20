@@ -61,17 +61,22 @@
 }
 
 .info-text, .info-obs, .info-ready {
-  font-family: 'Claster Oleander', serif;
-  font-size: clamp(1.4rem, 4vw, 1.6rem);
+  font-family: 'Poppins', serif;
+  font-size: clamp(1rem, 4vw, 1.2rem);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 
+.info-obs {
+   margin-bottom: 3rem;
+}
+
+
 .info-ready {
-  font-family: 'Claster Oleander', serif;
+  font-family: 'Poppins', serif;
   font-size: clamp(1.3rem, 5vw, 1.6rem); /* Aumentei um pouco para o efeito aparecer melhor */
   line-height: 1.7;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2%;
   font-style: italic;
   font-weight: 600;
   

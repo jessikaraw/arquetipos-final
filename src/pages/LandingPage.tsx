@@ -15,7 +15,7 @@ const LandingPage: React.FC = () => {
       
       <div className="landing-content">
         <h1 className="landing-title">
-          Descubra os seus <br /> Arquétipos
+          Descubra <br/> os seus <br /> Arquétipos
         </h1>
 
         <p className="landing-subtitle">

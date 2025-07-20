@@ -5,13 +5,13 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #E6D9D9;
+  background-color: #0a0a0a;
   padding: 1rem; /* Garante um respiro nas laterais */
   font-family: 'Poppins', sans-serif;
 }
 
 .pergunta-container {
-  background: #E6D9D9;
+  background: #f5f4f4;
   padding: clamp(1rem, 4vw, 1.5rem); /* Padding responsivo */
   border-radius: 20px;
   width: 90%;
@@ -97,7 +97,7 @@
   word-wrap: break-word; /* Força quebras para evitar estouro */
 
   background-image: 
-    linear-gradient(rgba(244, 240, 233, 0.7), rgba(244, 240, 233, 0.7)),
+    linear-gradient(rgba(244, 240, 233, 0.7), rgba(244, 240, 233, 0.5)),
     url('../assets/images/DOURADO (2).png');
   background-size: cover;
   background-position: center;
