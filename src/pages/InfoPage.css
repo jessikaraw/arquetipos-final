@@ -61,10 +61,15 @@
 }
 
 .info-text, .info-obs, .info-ready {
+  text-align: justify;
   font-family: 'Poppins', serif;
   font-size: clamp(1rem, 4vw, 1.2rem);
   line-height: 1.7;
   margin-bottom: 1.5rem;
+}
+
+.info-ready {
+  text-align: center;
 }
 
 .info-obs {

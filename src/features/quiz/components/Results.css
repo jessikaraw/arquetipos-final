@@ -6,7 +6,7 @@
   align-items: center;
   height: auto;
   min-height: 100vh;
-  background-color: #000000; /* Fundo preto para o corpo da página*/
+  background-color: #2c2b2b; /* Fundo preto para o corpo da página*/
 }
 
 /* Container principal - AGORA COM O FUNDO BRANCO, como figma */
@@ -62,7 +62,7 @@
 .subtitle {
   font-family: var(--font-body); /* Poppins */
   font-size: clamp(1.2rem, 3vw, 1.6rem); /* Tamanho de fonte responsivo */
-  color: #000000; /* Cor preta */
+  color: #2c2b2b; /* Cor preta */
   max-width: 600px;
   margin: 0 auto; /* Centraliza o subtítulo */
   font-weight: 400; /* Peso da fonte normal */
@@ -73,9 +73,9 @@
 /* Estilo comum para os cards (primário, secundário, e a nova seção de "próximos passos") */
 .result-card-common {
   font-family: var(--font-body);
-  background: #AC8B74; /* Cor de fundo dos cards */
+  background: #6d745f; /* Cor de fundo dos cards */
   border: none;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.6);
   border-radius: 0.5rem;
   overflow: hidden;
   margin: 0 auto; /* Padding interno para os cards */
@@ -250,7 +250,7 @@
 }
 
 .secondary-card {
-  background-color: #AC8B74;
+  background-color: #6d745f;
   border: none;
 }
 
