@@ -6,35 +6,22 @@
   align-items: center;
   height: auto;
   min-height: 100vh;
-  background-color: #f5f5f5; /* Fundo cinza claro para o corpo da página, como no exemplo */
+  background-color: #000000; /* Fundo preto para o corpo da página*/
 }
 
 /* Container principal - AGORA COM O FUNDO BRANCO, como figma */
 .results-container {
   width: 100%;
   max-width: 1024px; /* Largura máxima do conteúdo */
-  margin: 2rem auto; /* Centraliza horizontalmente e dá espaço nas margens verticais */
+  margin: 1rem auto; /* Centraliza horizontalmente e dá espaço nas margens verticais */
   padding: 1rem; /* Padding interno para o contêiner branco */
   background-color: #ffffff; /* FUNDO BRANCO APLICADO AQUI */
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Espaçamento entre os blocos (header, cards, footer) */
+  gap: 0rem; /* Espaçamento entre os blocos (header, cards, footer) */
   box-sizing: border-box; /* Inclui padding e borda no cálculo da largura/altura */
   /* Remova a cor de fundo #cab3b3 daqui, ela será aplicada em .results-content se houver um container bege externo */
-}
-
-/* REAJUSTANDO results-content: Ele não terá fundo, apenas agrupará os elementos */
-.results-content {
-  width: 100%; /* Ocupa a largura total do results-container */
-  padding: 0; /* Remove padding extra, os elementos internos terão */
-  margin: 0; /* Remove margens extras */
-  background-color: transparent; /* Transparente para que o fundo branco do .results-container apareça */
-  border-radius: 0; /* Remove borda */
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem; /* Espaçamento entre os elementos (header, cards, footer) */
-  align-items: center; /* Centraliza os itens horizontalmente */
 }
 
 /* Cabeçalho */
@@ -48,19 +35,19 @@
 
 .header img {
   display: block;
-  max-width: 300px; /* Ajuste o tamanho do logo */
+  max-width: 200px; /* Ajuste o tamanho do logo */
   height: auto;
-  margin: 0 auto 1rem auto; /* Centraliza a imagem e adiciona margem inferior */
+  margin: 0 auto 0rem auto; /* Centraliza a imagem e adiciona margem inferior */
 }
 
 /* TÍTULO PRINCIPAL AJUSTADO */
 .main-title {
   font-family: 'Claster Oleander', serif;
-  font-size: clamp(2.5rem, 7vw, 4rem); /* Tamanho de fonte responsivo */
+  font-size: clamp(2rem, 7vw, 4rem); /* Tamanho de fonte responsivo */
   font-weight: normal;
   line-height: 1.2;
   text-align: center; /* Centraliza o texto */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra suave para o texto */
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Sombra suave para o texto */
 
   /* --- NOVAS PROPRIEDADES PARA O EFEITO DOURADO --- */
   background-image: url('../../../assets/images/DOURADO (2).png'); /* Caminho para sua imagem dourada */
@@ -88,13 +75,12 @@
   font-family: var(--font-body);
   background: #AC8B74; /* Cor de fundo dos cards */
   border: none;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
-  padding: 1.5rem; /* Padding interno para os cards */
+  margin: 0 auto; /* Padding interno para os cards */
   width: 100%; /* Garante que os cards ocupem a largura do results-content */
   box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-  margin-bottom: 0; /* Espaçamento entre os cards é controlado pelo 'gap' do results-content */
 }
 
 /* Resultado Principal */
@@ -105,11 +91,15 @@
 .primary-card-layout {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  margin-bottom: -2rem;
+  /*gap: 1.5 rem;*/
 }
 
 .primary-info {
   width: 100%;
+  margin-top: -3rem;
+  margin-bottom: -3rem;
+
 }
 
 .primary-heading {
@@ -117,14 +107,13 @@
   font-size: 1.25rem; /* Ajuste o tamanho da fonte conforme a imagem */
   font-weight: 600;
   color: white;
-  margin-bottom: 0.5rem;
-  margin-top: 0;
+  margin-top: -2rem; /* Margem negativa para ajustar o distanciamento */
 }
 
 .primary-title-container {
   display: flex;
   align-items: baseline; /* Alinha pela base do texto */
-  justify-content: left; /* CENTRALIZA O NOME DO ARQUÉTIPO E PORCENTAGEM */
+  justify-content: center; /* CENTRALIZA O NOME DO ARQUÉTIPO E PORCENTAGEM */
   gap: 0.5rem; /* Espaço entre título e porcentagem */
   margin-bottom: 0.5rem;
   flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
@@ -166,6 +155,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+
+}
+
+.primary-progress{
+  margin-top: -4rem; /* Margem negativa para ajustar o distanciamento */
 }
 
 /* Adicionando regra para o indicador de progresso primário */
@@ -175,6 +169,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  
 }
 
 .primary-traits {
@@ -199,9 +194,8 @@
 }
 
 .video-wrapper {
-  aspect-ratio: 16 / 9;
-  background-color: rgba(120, 53, 15, 0.1);
-  border-radius: 0.375rem;
+  aspect-ratio: 9/ 9;
+  background-color: rgba(120, 53, 15, 0.0);
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -211,10 +205,10 @@
 .video-caption {
   font-family: var(--font-body);
   text-align: center;
-  font-weight: 600;
+  font-weight: 200;
   color: white;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: -1.5rem;
   font-size: 1rem;
   padding: 0 1rem;
 }
@@ -241,9 +235,10 @@
 .section-title {
   font-family: var(--font-body);
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 00;
   color: #FFFFFF; /* BRANCO CONFORME FIGMA */
-  margin-bottom: 1rem;
+  margin-top: -1rem; /* Margem negativa para ajustar o distanciamento */
+  margin-bottom: -1rem; /* Margem negativa para ajustar o distanciamento */
   text-align: center;
 }
 
@@ -263,7 +258,9 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: -2%;
+  text-justify: center;
+  margin-left: 1rem;
+  margin-top: -2rem; /* Margem negativa para ajustar o distanciamento */
 }
 
 .secondary-title {
@@ -275,14 +272,18 @@
 
 .secondary-percentage {
   font-family: var(--font-body);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.5rem;
   color: white;
+  width: 80px;
 }
 
 .secondary-progress {
   font-family: var(--font-body);
-  margin-bottom: 1.3rem;
+  margin-top: -1rem; /* Margem negativa para ajustar o distanciamento */
+  margin-bottom: -1rem; /* Margem negativa para ajustar o distanciamento */
+  padding-left: 1.5%;
+  height: 1rem;
+
 }
 
 .secondary-progress .progress-indicator {
@@ -323,6 +324,7 @@
   text-align: center;
   font-weight: 700;
   color: white;
+  margin-top: -1rem; /*Margem negativa para ajuste dao distanciamento*/
   margin-bottom: 0.5rem;
 }
 
@@ -331,6 +333,8 @@
   font-weight: 400;
   margin-bottom: 1.5rem;
   text-align: center;
+  margin-top: -0.8rem; /*Margem negativa para ajuste dao distanciamento*/
+
 }
 
 .credentials-access {
@@ -386,6 +390,8 @@
   margin-top: 1.5rem;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: -3rem; /*Margem negativa para ajuste dao distanciamento*/
+
 }
 
 /* Responsivo para controles */

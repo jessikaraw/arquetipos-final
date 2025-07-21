@@ -75,7 +75,7 @@ export default function Results({ dominant, secondary }: ResultsProps) {
                   {secondary.map((arq, idx) => (
                     <Card className="secondary-card" key={idx}>
                       <CardContent className="secondary-card-content">
-                        <div className="secondary-header"> <h3 className="secondary-title">{arq.nome}</h3> <span className="secondary-percentage">{arq.percentage}%</span>
+                        <div className="secondary-header"> <h3 className="secondary-title">{arq.nome}</h3> <span className="secondary-percentage">- {arq.percentage}%</span>
                         </div>  <Progress value={arq.percentage} className="secondary-progress" />
                         <p className="secondary-description">Características: {getArchetypeDescription(arq.nome)}
                         </p>
