@@ -5,13 +5,13 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #0a0a0a;
+  background-color: #efede9;
   padding: 1rem; /* Garante um respiro nas laterais */
   font-family: 'Poppins', sans-serif;
 }
 
 .pergunta-container {
-  background: #f5f4f4;
+  background: #efede9;
   padding: clamp(1rem, 4vw, 1.5rem); /* Padding responsivo */
   border-radius: 20px;
   width: 90%;
@@ -41,7 +41,7 @@
 .pergunta-titulo {
   font-family: 'Poppins', sans-serif; /* Corrigido: 'poppis' para 'Poppins' */
   font-size: clamp(1.2rem, 4vw, 1.5rem); /* Fonte responsiva */
-  font-weight: 600; /* Ajustado para melhor leitura */
+  font-weight: 500; /* Ajustado para melhor leitura */
   margin-bottom: 1.5rem;
   color: rgb(37, 37, 31);
   line-height: 1.4;
@@ -49,6 +49,14 @@
   display: flex; /* Para centralizar verticalmente */
   align-items: center;
   justify-content: center;
+
+    /* --- NOVAS PROPRIEDADES PARA O EFEITO DOURADO --- */
+  background-image: url('../assets/images/DOURADO (2).png'); /* Caminho para sua imagem dourada */
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text; /* Para navegadores WebKit (Chrome, Safari) */
+  background-clip: text; /* Padrão */
+  color: transparent; /* Torna o texto transparente para mostrar o fundo */
 }
 
 .barra-progresso-container {
@@ -84,38 +92,40 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #000000;
+  color: #c5a361;
   border-style: solid;
   border-radius: 15px;
-  border-color:  white;
+  background-color: #f7f7f7;
+  border-color:  #f2f5f5;
   border-width: 2px;
   line-height: 1.4; /* Melhora a leitura de texto em múltiplas linhas */
+  
   
   /* A CORREÇÃO PRINCIPAL: */
   box-sizing: border-box; /* Garante que padding não aumente a largura */
   white-space: normal; /* Permite que o texto quebre a linha */
   word-wrap: break-word; /* Força quebras para evitar estouro */
 
-  background-image: 
+  /*background-image: 
     linear-gradient(rgba(244, 240, 233, 0.7), rgba(244, 240, 233, 0.5)),
-    url('../assets/images/DOURADO (2).png');
+    url('../assets/images/DOURADO (2).png');*/
   background-size: cover;
   background-position: center;
 }
 
-.alternativa-botao:hover {
-  transform: translateY(-2px); /* Efeito mais sutil */
+/*.alternativa-botao:hover {
+  transform: translateY(-2px); 
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   background-image: 
     linear-gradient(rgba(244, 240, 233, 0.5), rgba(244, 240, 233, 0.5)),
     url('../assets/images/DOURADO (2).png');
-}
+}*/
 
 .alternativa-botao.selecionada {
-  background-image: url('../assets/images/AZUL (2).png');
+  background-image: url('../assets/images/DOURADO (2).png');
   color: white;
   border: 2px solid transparent; /* Remove a borda padrão para não somar tamanho */
-  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+  box-shadow: 0 4px 15px rgba(218, 212, 165, 32);
   transform: scale(1.02);
 }
 
