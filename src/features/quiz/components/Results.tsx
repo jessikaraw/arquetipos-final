@@ -96,7 +96,7 @@ export default function Results({ dominant, secondary }: ResultsProps) {
                 <p className="video-caption">Assista ao vídeo exclusivo onde revelamos mais segredos da sua jornada milionária!</p>
                 <div className="video-wrapper">
                   <ReactPlayer
-                    url="https://youtu.be/1ajqUh1MKR8" // <-- LINK NOVO
+                    url="https://www.youtube.com/watch?v=9AOjgwKh96M" // <-- LINK NOVO
                     className="react-player"
                     playing={isPlaying}
                     controls={false}
